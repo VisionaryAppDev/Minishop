@@ -48,6 +48,7 @@
            }
        },
         created(){
+            alert("This one not working as expected!")
            Product.getUserInfo()
            .then(products => {
                this.products = products
