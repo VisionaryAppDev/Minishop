@@ -13,7 +13,6 @@
                 <th></th>
             </tr>
             <tr v-for="sale in sales" >
-                
                 <td v-text="sale.sale_id"></td>
                 <td v-text="sale.id"></td>
                 <td v-text="sale.name"></td>

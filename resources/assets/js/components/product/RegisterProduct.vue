@@ -65,12 +65,13 @@
                     }
                 }) .then((response) =>{
                         console.log(response)
+                        alert("Created!")
                     })
                     .catch((error) => {
-                       // if(error.response.status == 403)
-                         //   alert("No permission!!!! redirect to login...");
-                        //else
-                          //  alert("Invalid data or data duplication!!...")
+                       if(error.response.status == 403)
+                           alert("No permission!!!! redirect to login...");
+                        else
+                           alert("Invalid data or data duplication!!...")
                         console.log(error)
                     })
 

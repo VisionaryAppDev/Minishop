@@ -21,13 +21,13 @@ class ProductsController extends Controller
      */
     public function index()
     {
-        return  $products = Product::orderBy('id', 'desc')->get();
-        return  $products = Product::orderBy('id', 'desc')->take(1)->get();
-        return  $products = Product::orderBy('id', 'desc')->paginate(10);   // in the client {{$products->links()}} // to get link      
-        return  $products = Product::where('id', 1)->get();
-        return $products = DB::select('SELECT * FROM Products');
+        //return  $products = Product::orderBy('id', 'desc')->get();
+        //return  $products = Product::orderBy('id', 'desc')->take(1)->get();
+        //return  $products = Product::orderBy('id', 'desc')->paginate(10);   // in the client {{$products->links()}} // to get link      
+        //return  $products = Product::where('id', 1)->get();
+        //return $products = DB::select('SELECT * FROM Products');
 
-        return view('products.index')->with('products', $products);
+        //return view('products.index')->with('products', $products);
     }
 
     /**

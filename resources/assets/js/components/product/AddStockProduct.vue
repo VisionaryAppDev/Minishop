@@ -4,7 +4,7 @@
     <form class="text-center border border-light p-5">
 
         <!-- Name -->
-        <select v-model="stock.product_id" class="browser-default custom-select mb-4">
+        <select v-model="stock.product_id" v-validate="'required'" class="browser-default custom-select mb-4">
             <option  v-for="product in products" :value="''+product.id">{{product.name}}</option>
         </select>
 
@@ -16,7 +16,7 @@
 
 
         <!-- Expirey Date -->
-        <input v-model="stock.expire_date" type="date"  class="form-control mb-4">
+        <input v-model="stock.expire_date" v-validate="'required'" type="date"  class="form-control mb-4">
 
 
         <!-- Send button -->
@@ -52,14 +52,14 @@
             save(){
                 axios.post('../stocks', this.$data.stock)
                     .then((response) =>{
-                        alert("Created!!")
+                        alert("Added!!")
                         console.log(response)
                     })
                     .catch((error) => {
                         if(error.response.status == 403)
                             alert("No permission!!!! redirect to login...");
                         else
-                            alert("Invalid data or data duplication!!...")
+                            alert("Invalid input data!!...")
                         console.log(error)
                     })
                 }

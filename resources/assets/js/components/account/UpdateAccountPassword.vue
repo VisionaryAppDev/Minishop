@@ -34,7 +34,7 @@
             save(){
                 axios.post('/update/password', this.$data.user)
                     .then((response) =>{
-                        alert("Created!!")
+                        alert("Updated!!")
                         console.log(response)
                     })
                     .catch((error) => {

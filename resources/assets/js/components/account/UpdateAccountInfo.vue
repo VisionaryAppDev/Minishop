@@ -32,7 +32,7 @@
             save(){
                 axios.post('/update/info', this.$data.user)
                     .then((response) =>{
-                        alert("Created!!")
+                        alert("Updated!!")
                         console.log(response)
                     })
                     .catch((error) => {
